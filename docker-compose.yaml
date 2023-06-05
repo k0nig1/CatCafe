@@ -1,0 +1,7 @@
+services:
+  catcafe:
+    image: node
+    ports:
+      - "3000:3000"
+  mongo:
+    image: mongo

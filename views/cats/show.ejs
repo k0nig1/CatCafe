@@ -1,0 +1,31 @@
+<% layout('/layouts/boilerplate.ejs') %>
+
+    <div class="clearfix">
+        <img src="<%= cat.imageUrl %> " class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
+        <h3>
+            <strong>Name</strong>
+            <%= cat.name %>
+        </h3>
+        <h4>
+            <strong>Breed</strong>
+            <%= cat.breed %>
+        </h4>
+        <h4>
+            <strong>Age</strong>
+            <%= cat.age %>
+        </h4>
+        <p>
+            <%= cat.description %>
+        </p>
+        <form action="/cats/<%= cat._id %>/edit">
+            <button class="btn btn-info">Edit</button>
+        </form>
+
+        <form action="/cats/<%= cat._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-danger">Delete Cat</button>
+        </form>
+
+        <footer>
+            <a href="/cats">Back to Cats</a>
+        </footer>
+    </div>

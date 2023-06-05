@@ -1,0 +1,35 @@
+<% layout('/layouts/boilerplate.ejs') %>
+
+    <h1>Edit Cat</h1>
+    <form action="/cats/<%= cat._id %>?_method=PUT" method="POST">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="cat[name]" value="<%= cat.name %> ">
+        </div>
+
+        <div>
+            <label for="breed">Breed</label>
+            <input type="text" id="breed" name="cat[breed]" value="<%= cat.breed %>">
+        </div>
+
+        <div>
+            <label for="age">Age</label>
+            <input type="text" id="age" name="cat[age]" value="<%= cat.age %>">
+        </div>
+
+        <div>
+            <label for="description">Description</label>
+            <input type="text" id="description" name="cat[description]" value="<%= cat.description %>">
+        </div>
+
+        <button class="btn btn-success">Update Cat</button>
+    </form>
+
+    <footer>
+        <div>
+            <a href="/cats/<%= cat._id %>">Return to Cat</a>
+        </div>
+        <div>
+            <a href="/cats">Show all Cats</a>
+        </div>
+    </footer>

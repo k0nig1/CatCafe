@@ -1,0 +1,25 @@
+<% layout('/layouts/boilerplate.ejs') %>
+    <h1>New Cat</h1>
+    <form action="/cats" method="POST">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="cat[name]">
+        </div>
+
+        <div>
+            <label for="breed">Breed</label>
+            <input type="text" id="breed" name="cat[breed]">
+        </div>
+
+        <div>
+            <label for="age">Age</label>
+            <input type="text" id="age" name="cat[age]">
+        </div>
+
+        <div>
+            <label for="description">Description</label>
+            <input type="text" id="description" name="cat[description]">
+        </div>
+
+        <button class="btn btn-success">Add Cat</button>
+    </form>
